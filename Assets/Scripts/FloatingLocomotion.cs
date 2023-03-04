@@ -8,10 +8,8 @@ public class FloatingLocomotion : MonoBehaviour
     [SerializeField] private float swimmingForce;
     [SerializeField] private float resistanceForce;
     [SerializeField] private float deadZone;
-    [SerializeField] private float interval;
     [SerializeField] private Transform trackingSpace;
 
-    private float currentWaitTime;
     private new Rigidbody rigidbody;
     private Vector3 currentDirection;
 
@@ -24,17 +22,16 @@ public class FloatingLocomotion : MonoBehaviour
     {
         bool rightButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.RTouch);
         bool leftButtonPressed = OVRInput.Get(OVRInput.Button.PrimaryHandTrigger, OVRInput.Controller.LTouch);
-        currentWaitTime += Time.deltaTime;
-        if (rightButtonPressed && leftButtonPressed)
+
+        if (true)
         {
             Vector3 leftHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.LTouch);
             Vector3 rightHandDirection = OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
             Vector3 localVelocity = leftHandDirection + rightHandDirection;
             localVelocity *= -1;
-            if (localVelocity.sqrMagnitude > deadZone * deadZone && currentWaitTime > interval)
+            if (localVelocity.sqrMagnitude > deadZone * deadZone)
             {
                 AddSwimmingForce(localVelocity);
-                currentWaitTime = 0;
             }
         }
 
@@ -51,7 +48,7 @@ public class FloatingLocomotion : MonoBehaviour
     private void AddSwimmingForce(Vector3 localVelocity)
     {
         Vector3 worldSpaceVelocity = trackingSpace.transform.TransformDirection(localVelocity);
-        rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Impulse);
+        rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = -worldSpaceVelocity.normalized;
     }
 }
