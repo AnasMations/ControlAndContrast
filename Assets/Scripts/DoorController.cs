@@ -8,6 +8,7 @@ public class DoorController : MonoBehaviour
 {
     public UnityEvent onDoorOpen;
     public int keyCount = 0;
+    private bool doorOpen = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +19,10 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyCount >= 3)
+        if(!doorOpen && keyCount >= 3)
         {
             unlockDoor();
+            doorOpen = true;
         }
     }
 
