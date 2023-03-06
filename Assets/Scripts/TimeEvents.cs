@@ -12,7 +12,21 @@ public class TimeEvents : MonoBehaviour
     {
         foreach (timedEvent e in events)
         {
-            StartCoroutine(e.ExecuteAfterTime(e.waitTime));
+            if (e.playOnStart)
+            {
+                StartCoroutine(e.ExecuteAfterTime(e.waitTimeInMinutes));
+            }
+        }
+    }
+
+    public void ExecuteEvent(string eventName)
+    {
+        foreach (timedEvent e in events)
+        {
+            if (e.eventName == eventName)
+            {
+                StartCoroutine(e.ExecuteAfterTime(e.waitTimeInMinutes));
+            }
         }
     }
 
@@ -22,12 +36,14 @@ public class TimeEvents : MonoBehaviour
 [Serializable]
 public class timedEvent
 {
-    public float waitTime;
+    public string eventName;
+    public float waitTimeInMinutes;
+    public bool playOnStart = false;
     public UnityEvent unityEvent;
 
     public IEnumerator ExecuteAfterTime(float time)
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time * 60);
         unityEvent.Invoke();
     }
 }
