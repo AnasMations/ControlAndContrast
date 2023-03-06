@@ -387,6 +387,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a43d5bb41038a7b44a5051f5d1bd5a55, type: 3}
   m_PrefabInstance: {fileID: 112529060}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &112529062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a43d5bb41038a7b44a5051f5d1bd5a55, type: 3}
+  m_PrefabInstance: {fileID: 112529060}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &112529063
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112529062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6041377522765385347, guid: a43d5bb41038a7b44a5051f5d1bd5a55, type: 3}
 --- !u!1001 &145556222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -699,21 +718,21 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 0.027
+      - m_Value: 0
         m_Name: Velocity
-        m_Overridden: 1
-      - m_Value: 0.0001
+        m_Overridden: 0
+      - m_Value: 0.037
         m_Name: Scale
-        m_Overridden: 1
+        m_Overridden: 0
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0.42745098, y: 0.39215687, z: 0.39215687, w: 0}
+      - m_Value: {x: 1, y: 1, z: 1, w: 0}
         m_Name: ColorSmoke
-        m_Overridden: 1
+        m_Overridden: 0
     m_Uint:
       m_Array: []
     m_Int:
@@ -5284,6 +5303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1231188080264688992, guid: c511abda9be754b4d9e7e69432135d66, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7017151733290014180, guid: c511abda9be754b4d9e7e69432135d66, type: 3}
       propertyPath: m_Name
       value: SpaceKey
