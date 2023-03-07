@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class PlayerManager : MonoBehaviour
 {
     public float endTimeInMinutes = 0;
+    public Animator fadeAnimator;
     public UnityEvent endEvent;
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,18 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void End()
     {
+        StartCoroutine(EndAfterTime(1f));
+    }
+
+    IEnumerator EndAfterTime(float time)
+    {
+        fadeAnimator.SetTrigger("fade");
+        yield return new WaitForSeconds(time);
         endEvent.Invoke();
     }
 }

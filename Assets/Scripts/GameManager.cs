@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-
+    private PlayerManager playerManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Scene Transition!");
         yield return new WaitForSeconds(time);
+        playerManager.fadeAnimator.SetTrigger("fade");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
