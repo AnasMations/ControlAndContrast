@@ -929,6 +929,8 @@ GameObject:
   - component: {fileID: 326329010}
   - component: {fileID: 326329009}
   - component: {fileID: 326329008}
+  - component: {fileID: 326329012}
+  - component: {fileID: 326329011}
   m_Layer: 0
   m_Name: Box Volume (1)
   m_TagString: Untagged
@@ -951,7 +953,7 @@ MonoBehaviour:
   m_IsGlobal: 0
   priority: 1
   blendDistance: 1
-  weight: 1
+  weight: 0
   sharedProfile: {fileID: 11400000, guid: 720382ddeb9423d4ea3d3475d76fdfe9, type: 2}
 --- !u!65 &326329009
 BoxCollider:
@@ -981,6 +983,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 33.376, z: 0}
+--- !u!95 &326329011
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326329007}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e884fe613ae427b42a856771bd56d959, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &326329012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326329007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1095af0dfedba92498284ea00e36e17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerTag: Player
+  enterTriggerfunction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 326329011}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bubu
+          m_BoolArgument: 0
+        m_CallState: 2
+  exitTriggerfunction:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &335577342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2563,7 +2616,7 @@ GameObject:
   - component: {fileID: 8466789999714672094}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5124,15 +5177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05c416cc348eddd49a745744961d3614, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.98
+      value: 24.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05c416cc348eddd49a745744961d3614, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.32
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05c416cc348eddd49a745744961d3614, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.95
+      value: -8.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 05c416cc348eddd49a745744961d3614, type: 3}
       propertyPath: m_LocalRotation.w
