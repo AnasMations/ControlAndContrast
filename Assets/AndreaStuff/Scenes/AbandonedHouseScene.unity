@@ -1261,7 +1261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8920543445751832104, guid: bf2e42df86bd4ad4e954c28be80ff21d, type: 3}
       propertyPath: _trackingOriginType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8920543445751832104, guid: bf2e42df86bd4ad4e954c28be80ff21d, type: 3}
       propertyPath: usePositionTracking
@@ -1614,7 +1614,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2.2
+  m_Height: 1
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1687,7 +1687,7 @@ PrefabInstance:
     - target: {fileID: 5052875327116857041, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4ba16b67155e13c40bc82fccf6a2f0d0, type: 3}
+      objectReference: {fileID: 8300000, guid: 72fe2f50c98e8164da7d020e9fa47804, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
 --- !u!1001 &526588804
@@ -2027,7 +2027,7 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
   - eventName: GrannyFalls
-    waitTimeInMinutes: 0.05
+    waitTimeInMinutes: 0.02
     playOnStart: 0
     unityEvent:
       m_PersistentCalls:
@@ -3227,7 +3227,7 @@ PrefabInstance:
     - target: {fileID: 5052875327116857041, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4ba16b67155e13c40bc82fccf6a2f0d0, type: 3}
+      objectReference: {fileID: 8300000, guid: 72fe2f50c98e8164da7d020e9fa47804, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
 --- !u!1001 &999783049
@@ -4765,7 +4765,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 10
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -5933,7 +5933,7 @@ PrefabInstance:
     - target: {fileID: 5052875327116857041, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 4ba16b67155e13c40bc82fccf6a2f0d0, type: 3}
+      objectReference: {fileID: 8300000, guid: 72fe2f50c98e8164da7d020e9fa47804, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13df61315f74a8f4dac0b9dd55f28794, type: 3}
 --- !u!1001 &8002575709827877719
