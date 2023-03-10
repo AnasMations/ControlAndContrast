@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AndreaStuff/Scenes/SpaceScene.unity
     guid: bd461244c4bbb1844925b73fd5cfc384
-  - enabled: 0
+  - enabled: 1
     path: Assets/AndreaStuff/Scenes/AbandonedHouseScene.unity
     guid: 725fe75424faa5548a106be4e3c8558c
+  - enabled: 1
+    path: Assets/AndreaStuff/Scenes/UnderwaterScene.unity
+    guid: 4cf10641baaf94245bb7dfdd5e5004ac
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 47b900db7fc004047bd88a2ce10a3dbd, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ba47b63f2b198284c893b18e39818809, type: 2}
